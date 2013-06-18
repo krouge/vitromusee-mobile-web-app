@@ -1,0 +1,70 @@
+.ui-block-a{
+
+    margin: 0 auto;
+	width: 80%;
+	text-align: center;
+}
+
+.ui-block-b{
+
+    margin: 0 auto;
+	width: 80%;
+	text-align: center;
+}
+
+.gauche{
+
+margin-left: 70px;
+
+}
+
+
+.img-100{
+   	display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.logo{
+	background:#ccc; 
+	height:150px;
+	line-height:100px; /* centrage vertical */
+	text-align:center; /* centrage horizontal */ 
+	background-image: url(img/compas.png);
+	background-repeat: no-repeat;
+	padding: 0;	
+
+}
+
+.back{	
+
+	width: 100%;
+	max-width: 100%;
+}
+
+.ui-grid-b{
+	padding-left: 10px;
+	padding-top:20px;
+}
+
+
+
+.ui-grid-b > div {
+    width:33%;  /*Remove this if you don't want them in a line*/ 
+    float:left; /*Remove this if you don't want them in a line*/
+}
+
+.ui-grid-b img{
+   	display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.ui-grid-b div{
+	padding:10px;
+}
+
+.imgCaption{
+	text-align: center;;
+	font-size: 17px;
+}
