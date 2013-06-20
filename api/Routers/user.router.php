@@ -13,7 +13,6 @@ $app->get('/user', function () use ($app) {
 	*/
 });
 
-//Create user
 $app->post('/user', function () use ($app) {	
 	//var_dump($app->request()->post('data'));
 	$user = json_decode($app->request()->post('data'), true);	
