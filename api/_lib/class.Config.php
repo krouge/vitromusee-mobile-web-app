@@ -18,4 +18,4 @@ Config::write('db.host', 'localhost');
 Config::write('db.port', '');
 Config::write('db.basename', 'vitro');
 Config::write('db.user', 'root');
-Config::write('db.password', '');
+Config::write('db.password', 'root');

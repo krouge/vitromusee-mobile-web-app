@@ -1,0 +1,132 @@
+#camera{
+	margin-left: 15px;
+	width:55px;
+}
+
+#img_oeuvre{
+}
+
+.ui-block-b {
+    width: 1%;
+}
+
+
+#action_photo{
+
+	overflow: hidden;
+
+}
+
+#right{
+	float: right;
+
+}
+
+#left{
+    max-width: 65%;
+}
+
+
+.nav-glyphish-example .ui-btn .ui-btn-inner {
+    padding-top: 30px !important;
+}
+.nav-glyphish-example .ui-btn .ui-icon {
+    border-radius: 0 0 0 0 !important;
+    box-shadow: none !important;
+    height: 30px !important;
+    margin-left: -15px !important;
+    width: 30px !important;
+}
+#picture .ui-icon {
+    background: url(../assets/glyphish/121-landscape.png) no-repeat transparent;
+
+}
+#user .ui-icon {
+    background: url(../assets/glyphish/111-user.png) no-repeat transparent;
+}
+#tag .ui-icon {
+    background: url(../assets/glyphish/15-tags.png) no-repeat transparent;
+}
+
+
+#retour {
+	border:0;
+	text-shadow: none;
+	background: none;
+	background-image: none;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	color: #ffffff;
+	box-shadow: none;
+	}
+#retour .ui-btn-inner{
+	border:0;
+	text-shadow: none;	
+	}
+
+.ui-btn-corner-all {
+
+	border-radius: 0px;
+
+}
+
+
+.nav{
+	width:100px;
+}
+
+.centrer{
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+	width: 100%;
+}
+
+.menu{	
+	line-height: 100%;
+	display: inline-block;
+	/*border-radius: 11px;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	box-shadow: 0px 0px 0px #666666;
+	-webkit-box-shadow: 0px 0px 0px #666666;
+	-moz-box-shadow: 0px 0px 0px #666666;
+	background: #EDEDED;
+	border: solid 1px #CFCFCF;*/
+	z-index:999;
+
+}
+
+
+
+.gauche{
+
+margin-left: 70px;
+
+}
+
+.img-100{
+   	display: block;
+    margin: 0 auto;
+    max-width: 100%;
+
+}
+
+.logo{
+
+	background:#ccc; 
+	height:150px;
+	line-height:100px; /* centrage vertical */
+	text-align:center; /* centrage horizontal */ 
+	background-image: url(img/compas.png);
+	background-repeat: no-repeat;
+	padding: 0;	
+
+}
+
+.back{	
+
+	width: 100%;
+	max-width: 100%;
+}

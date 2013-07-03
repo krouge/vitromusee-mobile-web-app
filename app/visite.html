@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<title>Vitromusée</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- jQuery Mobile CSS bits -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+
+	<!-- if you have a custom theme, add it here -->
+	<link rel="stylesheet"  href="themes/vitromusee.css" />
+	<link rel="stylesheet" href="themes/font-awesome/css/font-awesome.min.css">
+
+
+	<!-- Custom css -->
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- Javascript includes -->
+	<script src="js/jquery-1.8.2-min.js"></script>
+	<script src="js/mobileinit.js"></script>
+	<script src="js/jquery.mobile-1.3.1.min.js"></script>
+	<script src="js/application.js"></script>
+	<script>
+            $(document).bind( 'mobileinit', function(){
+              $.mobile.loader.prototype.options.text = "loading";
+              $.mobile.loader.prototype.options.textVisible = true;
+              $.mobile.loader.prototype.options.theme = "a";
+              $.mobile.loader.prototype.options.textonly = false;
+              $.mobile.loader.prototype.options.html = "<span class='ui-bar ui-overlay-c ui-corner-all'><img src='themes/images/ajax-loader.png' /><h2>loading</h2></span>";
+            });
+        </script>
+</head>
+<body>
+	<div data-role="page" data-add-back-btn="true">
+		<div data-role="header" data-fullscreen="true" >
+			
+			<a href="" data-rel="back" id="retour" data-role="button"  data-inline = "true" ><i class="icon-arrow-left icon-large"></i> </a>
+			<a href= "test.html" id="retour" data-role="button"  data-inline = "true" ><i class="icon-home icon-large"></i> </a>
+
+
+
+			<h1>Visite</h1>
+		</div>
+		<div data-role="content">
+
+			<div class="center">
+				<img class="img-100" src="img/chagall2.png"/>
+					<a href="oeuvres_vitrail.html" data-role="button" data-inline="false">Débuter la visite</a>
+			</div>
+			
+			<div class="center">
+				<img class="img-100" src="img/pinceau2.png"/>
+					<div class="btn">
+					<a href="#" data-role="button" data-inline="false">Débuter la visite</a>
+				</div>
+			</div>
+		</div><!-- /content -->
+	</div><!-- /page -->
+</body>
+</html>
