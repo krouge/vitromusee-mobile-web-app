@@ -12,11 +12,95 @@ class Artiste implements JsonSerializable
 	private $pseudo;
 	private $dateNaissance;
 	private $dateDeces;
+
+	private $nationalite;
+	private $activite;
+	private $formation;
+	private $style;
+	private $biographie;
+	private $thumb;
+
 	
 	function __construct()
 	{
 		
 	}	
+	
+
+	
+	public function getNationalite()
+	{
+	    return $this->nationalite;
+	}
+	
+	public function setNationalite($nationalite)
+	{
+	    $this->nationalite = $nationalite;
+	    return $this;
+	}
+	
+
+	public function getActivite()
+	{
+	    return $this->activite;
+	}
+	
+	public function setActivite($activite)
+	{
+	    $this->activite = $activite;
+	    return $this;
+	}
+	
+
+		public function getFormation()
+		{
+		    return $this->formation;
+		}
+		
+		public function setFormation($formation)
+		{
+		    $this->formation = $formation;
+		    return $this;
+		}
+
+
+		public function getStyle()
+		{
+		    return $this->style;
+		}
+		
+		public function setStyle($style)
+		{
+		    $this->style = $style;
+		    return $this;
+		}
+		
+
+		public function getBiographie()
+		{
+		    return $this->biographie;
+		}
+		
+		public function setBiographie($biographie)
+		{
+		    $this->biographie = $biographie;
+		    return $this;
+		}
+
+
+		public function getThumb()
+		{
+		    return $this->thumb;
+		}
+		
+		public function setThumb($thumb)
+		{
+		    $this->thumb = $thumb;
+		    return $this;
+		}
+		
+		
+			
 	
 	public function getIdArtiste()
 	{
@@ -92,7 +176,13 @@ class Artiste implements JsonSerializable
             'prenom' => $this->prenom,
             'pseudo' => $this->pseudo,
             'dateNaissance' => $this->dateNaissance,
-            'dateDeces' => $this->dateDeces
+            'dateDeces' => $this->dateDeces,
+            'nationalite' => $this->nationalite,
+            'activite' => $this->activite,
+            'style' => $this->style,
+            'biographie' => $this->biographie,
+            'thumb' => $this->thumb
+            
         ];
     }
 

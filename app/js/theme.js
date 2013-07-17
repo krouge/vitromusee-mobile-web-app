@@ -1,9 +1,18 @@
-var api_url = "http://10.192.81.69:8888/vitromusee-mobile-web-app/api/"
+var api_url = "http://localhost:8888/vitromusee-mobile-web-app/api/"
 
 $(document).ready(function() {
 
-	//getThemes()
 	getThemes()
+
+	$('li','ul#theme_list').live('click', function(){
+    	
+		var id = $(this).data("id")
+		localStorage.setItem("idTheme",id)
+
+		var nom = $('.ui-link-inherit',this).clone().children().remove().end().text();
+		localStorage.setItem("nomTheme",nom)
+
+	});
 });
 
 function getThemes(){
@@ -17,18 +26,20 @@ function getThemes(){
 	    //called when complete
 	  },
 	  success: function(data, textStatus, xhr) {
+	  	
+	    $.each(data, function(key, value){
 
-	    $.each(data, function(key, value) {
+	  		console.log(data.length)
 
-	    	var li = $('<li/>');
-	    	var a = $('<a href="#"/>').html(value.nom);
-	    	var span = $('<span class="ui-li-count">12</span>');
+	    	var li = $('<li data-id="'+value.idTheme+'"/>');
+	    	var a = $('<a href="theme_list.html"/>').html(value.nom);
+	    	var span = $('<span class="ui-li-count">11</span>');
 
 	    	var wrapper = a.append(span)
 	    	var s = li.append(wrapper);
 	     	
-	     	$('#theme').append(s);
-	     	$('#theme').listview('refresh');
+	     	$('#theme_list').append(s);
+	     	$('#theme_list').listview('refresh');
 	    });
 
 	  },

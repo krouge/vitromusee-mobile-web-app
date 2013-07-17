@@ -11,6 +11,7 @@ class Oeuvre implements JsonSerializable{
 	private $description;
 	private $media;
 	private $thumb;
+	private $artistes;
 
 	function __construct()
 	{
@@ -80,6 +81,21 @@ class Oeuvre implements JsonSerializable{
 	    $this->thumb = $thumb;
 	    return $this;
 	}
+
+	public function getArtistes()
+	{
+	    return $this->artistes;
+	}
+	
+	public function setArtistes($artistes)
+	{
+	    $this->artistes = $artistes;
+	    return $this;
+	}
+	
+
+
+	
 	
 	public function jsonSerialize(){
 		
@@ -90,8 +106,8 @@ class Oeuvre implements JsonSerializable{
             'date' => $this->date,
             'thumb' => $this->thumb,
             'description' => $this->description,
-            'media' => $this->media
-            
+            'media' => $this->media, 
+            'artistes' => $this->artistes,           
         ];
     }
 	

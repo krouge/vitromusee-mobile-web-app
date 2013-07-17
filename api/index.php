@@ -17,6 +17,8 @@ require_once 'Controllers/artiste.controller.php';
 require_once 'Controllers/index.controller.php';
 require_once 'Controllers/theme.controller.php';
 require_once 'Controllers/oeuvre.controller.php';
+require_once 'Controllers/evenement.controller.php';
+
 
 
 $app->run();

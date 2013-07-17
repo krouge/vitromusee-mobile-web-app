@@ -86,5 +86,66 @@ class OeuvreManager
 
 	}
 
+	public function getArtisteByOeuvre($idArtiste,$idOeuvre){
+
+		$result	= array();
+
+		$sql = "SELECT Artiste_id FROM Oeuvre_Artiste WHERE Oeuvre_id = :idOeuvre AND Artiste_id = :idArtiste";
+
+		$stmt = $this->core->dbh->prepare($sql);
+
+		$stmt->bindParam(':idOeuvre', $idOeuvre, PDO::PARAM_INT);
+		$stmt->bindParam(':idArtiste', $idArtiste, PDO::PARAM_INT);
+
+		if ($stmt->execute()) {
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			
+		} else {
+			$result = 0;
+		}		
+		return $result;
+	}
+
+	public function getByTheme($idTheme){
+		
+		$result	= array();
+		$oeuvres = array();
+
+		$sql = "SELECT * FROM Oeuvre WHERE Theme_id = :idTheme";
+		
+		$stmt = $this->core->dbh->prepare($sql);
+
+		$stmt->bindParam(':idTheme', $idTheme, PDO::PARAM_INT);
+
+		if ($stmt->execute()) {
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+			foreach ($result as $key) {
+
+				$oeuvre = new Oeuvre();
+
+				$oeuvre->setIdOeuvre($key['id']);
+				$oeuvre->setNom($key['nom']);
+				$oeuvre->setDate($key['date']);
+				$oeuvre->setDescription($key['description']);
+				$oeuvre->setThumb($key['thumb']);
+
+				array_push($oeuvres, $oeuvre);
+
+			}
+		} else {
+			$result = 0;
+		}		
+		return $oeuvres;
+
+	}
+
+
+
+
+
+
+
+
 
 }

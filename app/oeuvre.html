@@ -27,31 +27,41 @@
 	
 </head>
 <body>
-	<div data-role="page" data-add-back-btn="true">
+	<div data-role="page" data-add-back-btn="true" id="Gallery1" class="gallery-page">
 		<div data-role="header" data-fullscreen="true" >
 			
 			<a href="" data-rel="back" id="retour" data-role="button"  data-inline = "true" ><i class="icon-arrow-left icon-large"></i> </a>
 			<a href= "index.html" id="retour" data-role="button"  data-inline = "true" ><i class="icon-home icon-large"></i> </a>
 
-			<h1>La Joconde</h1>
+			<h1 id="titreOeuvre"></h1>
 		</div>
 		<div data-role="content" id="oeuvre_content">
 
-			<div class="container_12">
-				<div id="control">
-					
+			<div id="#nav"data-role="navbar">
+			    <ul>
+			        <li><a href="#" id="oeuvre" class="ui-btn-active"><i class="icon-picture icon-large"></i></a></li>
+			        <li><a href="#" id="artiste"><i class="icon-user icon-large"></i></a></li>
+			        <li><a href="#"id="media"><i class="icon-camera icon-large"></i></a></li>
+			    </ul>
+			</div><!-- /navbar -->
 
-				</div>   
-		    </div>
+			
+			
+			<div class="container_12"></div>
+		  
+					<script src="js/test.js"></script>
+
+	    	<link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+
+		    <script type="text/javascript" src="js/klass.min.js"></script>
+	    	<script type="text/javascript" src="js/code.photoswipe.jquery-3.0.5.min.js"></script>
 
 
-		   
-
-	
-
+		    
 			<link rel="stylesheet" href="css/jquery-mobile-fluid960.css" />
 		</div><!-- /content -->
-		<script src="js/test.js"></script>
-	</div><!-- /page -->
+
+
+	</div><!-- /page-->
 </body>
 </html>

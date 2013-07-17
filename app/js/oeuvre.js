@@ -1,10 +1,17 @@
 var api_url = "http://localhost:8888/vitromusee-mobile-web-app/api/"
 
-$(document).ready(function() {
+$(document).on('pageinit','[data-role="page"]',function() {
 
-	$("#oeuvre_liste").click(save)
+
 	getOeuvres()
-	
+
+	$('li','ul#oeuvre_liste').live('click', function(){
+    	
+		var id = $(this).data("id")
+
+		localStorage.setItem("id",id)
+
+	});
 });
 
 function getOeuvres(){
@@ -19,22 +26,37 @@ function getOeuvres(){
 	  },
 	  success: function(data, textStatus, xhr) {
 
-  		$.each(data, function(index, val) {
+	  	$('#oeuvre_liste').empty();
+
+  		$.each(data, function(index,val) {
 
   			var li = $('<li class="test"/>');
 	    	var a = $('<a href="oeuvre.html"/>');
-	    	var img = $('<img/>').attr("src",api_url+val.thumb);
+	    	var img = $('<img style="width:80px;heigth:80px;"/>').attr("src",api_url+val.thumb);
 	    	var h2 = $('<h2/>').html(val.nom);
-	    	var p = $('<p/>').html(val.idOeuvre)
-
 	    	var i = a.append(img);
 	    	a.append(h2)
-	    	a.append(p)
-	    	
-	    	var newLi= li.append(i);
-	    	$('#oeuvre_liste').append(newLi);
-  		});
-  		
+
+	    	var tabLength = val.artistes.length
+
+	    	var tab = val.artistes;
+	    	var stringArtiste = "";
+
+  			$.each(tab, function(index, val) {
+					stringArtiste+=val.nom+" "+val.prenom+" et "
+  			});
+
+		    var stringArtisteTruncate = $.trim(stringArtiste).substring(0, stringArtiste.length - 3)	
+
+
+  			var p = $('<p/>').html(stringArtisteTruncate)
+    		a.append(p)
+
+			var newLi= li.append(i);
+  			$('#oeuvre_liste').append(newLi);
+
+		});
+
   		$('#oeuvre_liste').listview('refresh');
 
 	  },
@@ -44,11 +66,6 @@ function getOeuvres(){
 	});	
 }
 
-function save(){
-
-	var id = $(".ui-li-desc").text();
-	sessionStorage.setItem("id",id)
-}
 
 
 
