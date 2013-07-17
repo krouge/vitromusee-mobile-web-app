@@ -8,8 +8,10 @@ class Evenement implements JsonSerializable
 	private $idEvenement;
 	private $nom;
 	private $type;
+
 	private $dateDebut;
 	private $dateFin;
+	
 	private $description;
 	private $thumb;
 
@@ -21,12 +23,12 @@ class Evenement implements JsonSerializable
 		$jour_debut = 0;
 		$mois_debut = 0;
 		$annee_debut = 0;
-		$this->dateDebut = array($jour_debut, $mois_debut, $annee_debut);
+		$this->dateDebut = array('jour'=>$jour_debut, 'mois'=>$mois_debut, 'annee'=>$annee_debut);
 
 		$jour_fin = 0;
 		$mois_fin = 0;
 		$annee_fin = 0;
-		$this->dateFin = array($jour_fin, $mois_fin, $annee_fin);
+		$this->dateFin = array('jour'=>$jour_fin, 'mois'=>$mois_fin, 'annee'=>$annee_fin);
 	}
 
 

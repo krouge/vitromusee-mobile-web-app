@@ -96,16 +96,17 @@ class EvenementManager{
 				$evenement->setNom($key['nom']);
 
 				$datesDebut = $evenement->getDateDebut();
-				$datesDebut[0] = $key['jour_debut'];
-				$datesDebut[1] = $key['mois_debut'];
-				$datesDebut[2] = $key['annee_debut'];
+				$datesDebut['jour'] = $key['jour_debut'];
+				$datesDebut['mois'] = $key['mois_debut'];
+				$datesDebut['annee'] = $key['annee_debut'];
 				$evenement->setDateDebut($datesDebut);
-				print_r($datesDebut);
+
 				$datesFin = $evenement->getDateFin();
-				$datesFin[0] = $key['jour_fin'];
-				$datesFin[1] = $key['mois_fin'];
-				$datesFin[2] = $key['annee_fin'];
+				$datesFin['jour'] = $key['jour_fin'];
+				$datesFin['mois'] = $key['mois_fin'];
+				$datesFin['annee'] = $key['annee_fin'];
 				$evenement->setDateFin($datesFin);
+
 
 				$evenement->setDescription($key['description']);
 				$evenement->setThumb($key['thumb']);
@@ -116,9 +117,7 @@ class EvenementManager{
 		} else {
 			$result = 0;
 		}		
-			echo "<pre>";
-				print_r($evenements);
-			echo "</pre>";
+		
 
 		return $evenements;
 	}

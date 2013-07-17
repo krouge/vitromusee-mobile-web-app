@@ -1,6 +1,6 @@
 <?php
 
-$app->get('/agenda/:annee/:mois', function ($annee, $mois) {
+$app->get('/agenda/:annee/:mois', function ($annee, $mois) use($app) {
     
 	$callback = $app->request()->params('callback');
 
