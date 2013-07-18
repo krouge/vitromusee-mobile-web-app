@@ -15,8 +15,6 @@ $(document).ready(function() {
 
 function getArtistes(){
 
-	
-
 	$.ajax({
 	  url: api_url+"artiste",
 	  type: 'GET',
@@ -26,9 +24,11 @@ function getArtistes(){
 	  },
 	  success: function(data, textStatus, xhr) {
 
-	  	 $.each(data, function(key, val) {
 
-	  	 	
+
+
+
+	  	 $.each(data, function(key, val) {
 
 	    	var li = $('<li data-id="'+val.idArtiste+'"/>');
 	    	var a = $('<a href="artiste_profil.html"/>').html(val.nom+" "+ val.prenom);

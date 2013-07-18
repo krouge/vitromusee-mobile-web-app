@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 	getCurrentMonthData(dateActuelle);
 
-	$('#suivant').live('click', function(){
+	$('#suivant').on('click', function(){
     	nextMonth(dateActuelle)
 	});
 

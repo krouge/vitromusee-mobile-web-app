@@ -5,7 +5,7 @@ $(document).on('pageinit','[data-role="page"]',function() {
 
 	getOeuvres()
 
-	$('li','ul#oeuvre_liste').live('click', function(){
+	$('li','ul#oeuvre_liste').on('click', function(){
     	
 		var id = $(this).data("id")
 
